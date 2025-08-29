@@ -1,0 +1,6 @@
+echo fastapi>>requirements.txt
+echo uvicorn>>requirements.txt
+echo pdfplumber>>requirements.txt
+sentence-transformers
+faiss-cpu
+numpy
