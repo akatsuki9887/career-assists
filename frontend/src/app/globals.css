@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --surface: #F9FAFB;
+  --surface-2: #FFFFFF;
+  --surface-2-rgb: 255, 255, 255;
+  --border: #E5E7EB;
+  --muted: #6B7280;
+  --accent: #4A90E2;
+  --text: #1A202C;
+}
+[data-theme="dark"] {
+  --surface: #1A202C;
+  --surface-2: #2D3748;
+  --surface-2-rgb: 45, 55, 72;
+  --border: #4A5568;
+  --muted: #A0AEC0;
+  --accent: #A3BFFA;
+  --text: #F7FAFC;
+}
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight font-heading text-text;
+  }
+  h2 {
+    @apply text-2xl font-semibold font-heading text-text;
+  }
+  h3 {
+    @apply text-xl font-semibold font-heading text-text;
+  }
+  p {
+    @apply text-base text-muted;
+  }
+  small {
+    @apply text-sm text-muted;
+  }
+  body {
+    @apply font-body bg-surface text-text antialiased;
+  }
+}
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+  .animate-fade {
+    animation: fade 0.5s ease-in-out;
+  }
+  .animate-lift {
+    animation: lift 0.2s ease-out;
+  }
+  .hover\:lift:hover {
+    @apply animate-lift;
+  }
+  .glass {
+    @apply backdrop-blur-md border border-border border-opacity-50;
+    background-color: rgba(var(--surface-2-rgb), 0.3);
+  }
+}
+@media (prefers-reduced-motion) {
+  .animate-bounce-slow,
+  .animate-fade,
+  .animate-lift,
+  .hover\:lift:hover {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+}
+@layer utilities {
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes lift {
+    0% {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

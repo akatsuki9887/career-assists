@@ -1,0 +1,681 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Google",
+    "requiredSkills": ["Python", "JavaScript", "React", "TypeScript"],
+    "description": "Develop scalable web applications using modern frameworks like React and TypeScript, with Python for backend services.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Amazon",
+    "requiredSkills": ["Python", "SQL", "AWS", "ETL"],
+    "description": "Analyze large datasets, build ETL pipelines, and deploy models on AWS cloud infrastructure.",
+    "salaryRange": "$120,000-$180,000"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "Microsoft",
+    "requiredSkills": ["Docker", "Docker Compose", "Kubernetes", "Helm", "Istio"],
+    "description": "Manage CI/CD pipelines, deploy containerized applications using Docker, Docker Compose, and Kubernetes with Helm and Istio.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Meta",
+    "requiredSkills": ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+    "description": "Build and maintain REST APIs with Node.js and Express, using MongoDB and PostgreSQL for data storage.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Apple",
+    "requiredSkills": ["React", "Vue.js", "HTML", "CSS"],
+    "description": "Create responsive and user-friendly interfaces using React and Vue.js, with strong HTML and CSS skills.",
+    "salaryRange": "$90,000-$135,000"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Tesla",
+    "requiredSkills": ["Python", "TensorFlow", "PyTorch", "CUDA"],
+    "description": "Design and deploy machine learning models for autonomous systems, leveraging TensorFlow and PyTorch with GPU acceleration.",
+    "salaryRange": "$130,000-$200,000"
+  },
+  {
+    "title": "Cloud Architect",
+    "company": "IBM",
+    "requiredSkills": ["AWS", "Azure", "Terraform", "Ansible"],
+    "description": "Design and implement cloud infrastructure solutions using AWS and Azure, with automation via Terraform and Ansible.",
+    "salaryRange": "$140,000-$190,000"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Netflix",
+    "requiredSkills": ["JavaScript", "Node.js", "React", "MongoDB"],
+    "description": "Build end-to-end streaming platform features, from frontend React components to backend Node.js services with MongoDB.",
+    "salaryRange": "$110,000-$170,000"
+  },
+  {
+    "title": "Security Engineer",
+    "company": "Cisco",
+    "requiredSkills": ["Python", "Wireshark", "SIEM", "Penetration Testing"],
+    "description": "Develop security protocols and conduct penetration testing to protect network infrastructure using SIEM tools.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "Uber",
+    "requiredSkills": ["Swift", "Kotlin", "React Native"],
+    "description": "Develop cross-platform mobile applications for ride-sharing services using Swift, Kotlin, and React Native.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "AI Research Scientist",
+    "company": "OpenAI",
+    "requiredSkills": ["Python", "PyTorch", "NLP", "Deep Learning"],
+    "description": "Conduct research in natural language processing and deep learning to advance AI model capabilities.",
+    "salaryRange": "$150,000-$220,000"
+  },
+  {
+    "title": "Database Administrator",
+    "company": "Oracle",
+    "requiredSkills": ["SQL", "PL/SQL", "Oracle DB", "MySQL"],
+    "description": "Manage and optimize large-scale databases, ensuring high availability and performance with Oracle DB and MySQL.",
+    "salaryRange": "$90,000-$130,000"
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Dropbox",
+    "requiredSkills": ["Python", "Go", "Kubernetes", "Prometheus"],
+    "description": "Ensure system reliability and performance by managing Kubernetes clusters and monitoring with Prometheus.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Game Developer",
+    "company": "Electronic Arts",
+    "requiredSkills": ["C++", "Unity", "Unreal Engine"],
+    "description": "Develop immersive gaming experiences using C++, Unity, and Unreal Engine for next-gen platforms.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Embedded Systems Engineer",
+    "company": "Intel",
+    "requiredSkills": ["C", "C++", "RTOS", "ARM"],
+    "description": "Design and develop embedded systems for IoT devices, focusing on real-time operating systems and ARM architecture.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Snowflake",
+    "requiredSkills": ["Python", "SQL", "Spark", "Snowflake"],
+    "description": "Build scalable data pipelines using Spark and Snowflake for cloud-based data warehousing solutions.",
+    "salaryRange": "$125,000-$175,000"
+  },
+  {
+    "title": "Blockchain Developer",
+    "company": "Coinbase",
+    "requiredSkills": ["Solidity", "Ethereum", "Web3.js", "Node.js"],
+    "description": "Develop decentralized applications and smart contracts on Ethereum using Solidity and Web3.js.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "QA Engineer",
+    "company": "Atlassian",
+    "requiredSkills": ["Selenium", "Cypress", "Jira", "Test Automation"],
+    "description": "Design and execute automated test scripts using Selenium and Cypress to ensure product quality.",
+    "salaryRange": "$85,000-$125,000"
+  },
+  {
+    "title": "Network Engineer",
+    "company": "Juniper Networks",
+    "requiredSkills": ["CCNP", "BGP", "MPLS", "Python"],
+    "description": "Design and manage enterprise network infrastructure, utilizing BGP and MPLS with Python for automation.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "AR/VR Developer",
+    "company": "Magic Leap",
+    "requiredSkills": ["Unity", "C#", "ARCore", "ARKit"],
+    "description": "Create immersive augmented and virtual reality experiences using Unity, ARCore, and ARKit.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Adobe",
+    "requiredSkills": ["Java", "Spring", "REST APIs", "Microservices"],
+    "description": "Develop enterprise-grade applications using Java Spring framework and RESTful microservices.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Data Analyst",
+    "company": "Tableau",
+    "requiredSkills": ["SQL", "Tableau", "Python", "Excel"],
+    "description": "Create data visualizations and dashboards using Tableau and SQL to drive business insights.",
+    "salaryRange": "$80,000-$120,000"
+  },
+  {
+    "title": "Cybersecurity Analyst",
+    "company": "Palo Alto Networks",
+    "requiredSkills": ["Wireshark", "Splunk", "Firewall Management", "Python"],
+    "description": "Monitor and analyze security threats using Splunk and Wireshark, managing firewall configurations.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Airbnb",
+    "requiredSkills": ["React", "TypeScript", "GraphQL", "Tailwind CSS"],
+    "description": "Build user-friendly interfaces for travel platforms using React, TypeScript, and GraphQL.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Product Manager",
+    "company": "Salesforce",
+    "requiredSkills": ["Agile", "Scrum", "Jira", "Product Roadmapping"],
+    "description": "Lead product development cycles, defining roadmaps and managing teams using Agile and Scrum methodologies.",
+    "salaryRange": "$120,000-$180,000"
+  },
+  {
+    "title": "Solutions Architect",
+    "company": "Red Hat",
+    "requiredSkills": ["Linux", "OpenShift", "Ansible", "Cloud Native"],
+    "description": "Design cloud-native solutions using Red Hat OpenShift and Ansible for enterprise clients.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "AI Engineer",
+    "company": "NVIDIA",
+    "requiredSkills": ["Python", "CUDA", "TensorRT", "Deep Learning"],
+    "description": "Optimize AI models for GPU acceleration using CUDA and TensorRT for high-performance computing.",
+    "salaryRange": "$140,000-$200,000"
+  },
+  {
+    "title": "Backend Engineer",
+    "company": "Spotify",
+    "requiredSkills": ["Java", "Spring Boot", "Kafka", "PostgreSQL"],
+    "description": "Develop scalable backend systems for music streaming using Java Spring Boot and Kafka.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "VMware",
+    "requiredSkills": ["AWS", "Azure", "vSphere", "Terraform"],
+    "description": "Implement and manage hybrid cloud environments using AWS, Azure, and VMware vSphere.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Mobile App Developer",
+    "company": "Lyft",
+    "requiredSkills": ["Swift", "Kotlin", "Flutter"],
+    "description": "Build mobile applications for ride-sharing platforms using Swift, Kotlin, and Flutter.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Big Data Engineer",
+    "company": "Cloudera",
+    "requiredSkills": ["Hadoop", "Spark", "Hive", "Python"],
+    "description": "Develop and maintain big data solutions using Hadoop, Spark, and Hive for large-scale analytics.",
+    "salaryRange": "$125,000-$175,000"
+  },
+  {
+    "title": "Full Stack Engineer",
+    "company": "Slack",
+    "requiredSkills": ["React", "Node.js", "TypeScript", "MySQL"],
+    "description": "Build collaborative tools with React and Node.js, integrating with MySQL for data management.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Robotics Engineer",
+    "company": "Boston Dynamics",
+    "requiredSkills": ["C++", "ROS", "Python", "Computer Vision"],
+    "description": "Develop robotics software for autonomous systems using ROS, C++, and computer vision techniques.",
+    "salaryRange": "$120,000-$180,000"
+  },
+  {
+    "title": "Web Developer",
+    "company": "Squarespace",
+    "requiredSkills": ["JavaScript", "React", "CSS", "HTML"],
+    "description": "Create customizable web templates and user interfaces using React, JavaScript, and CSS.",
+    "salaryRange": "$90,000-$135,000"
+  },
+  {
+    "title": "Data Science Manager",
+    "company": "LinkedIn",
+    "requiredSkills": ["Python", "SQL", "Machine Learning", "Leadership"],
+    "description": "Lead a team of data scientists to develop machine learning models for professional networking insights.",
+    "salaryRange": "$150,000-$220,000"
+  },
+  {
+    "title": "Infrastructure Engineer",
+    "company": "Cloudflare",
+    "requiredSkills": ["Go", "Kubernetes", "Terraform", "Linux"],
+    "description": "Build and maintain global infrastructure for content delivery using Go, Kubernetes, and Terraform.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Shopify",
+    "requiredSkills": ["React", "TypeScript", "GraphQL", "CSS"],
+    "description": "Develop e-commerce platform features with React, TypeScript, and GraphQL for seamless user experiences.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Security Architect",
+    "company": "CrowdStrike",
+    "requiredSkills": ["SIEM", "Threat Hunting", "Cloud Security", "Python"],
+    "description": "Design security architectures for cloud environments, focusing on threat hunting and SIEM integration.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Software Developer",
+    "company": "Intuit",
+    "requiredSkills": ["Java", "Spring", "AWS", "Microservices"],
+    "description": "Build financial software solutions using Java, Spring, and AWS for microservices architecture.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Databricks",
+    "requiredSkills": ["Python", "Spark", "MLflow", "Deep Learning"],
+    "description": "Develop machine learning pipelines using Spark and MLflow for scalable AI solutions.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Network Security Engineer",
+    "company": "Fortinet",
+    "requiredSkills": ["Firewall Management", "VPN", "Python", "SIEM"],
+    "description": "Implement and manage network security solutions, including firewalls and VPNs, with SIEM monitoring.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Twitter",
+    "requiredSkills": ["Scala", "Java", "Kafka", "Redis"],
+    "description": "Build real-time backend systems for social media platforms using Scala, Java, and Kafka.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Cloud Solutions Engineer",
+    "company": "Google Cloud",
+    "requiredSkills": ["GCP", "Kubernetes", "Terraform", "Python"],
+    "description": "Design and deploy cloud solutions on Google Cloud Platform, leveraging Kubernetes and Terraform.",
+    "salaryRange": "$120,000-$170,000"
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Palantir",
+    "requiredSkills": ["Python", "SQL", "Hadoop", "ETL"],
+    "description": "Develop data pipelines for large-scale analytics using Python, SQL, and Hadoop.",
+    "salaryRange": "$125,000-$175,000"
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Figma",
+    "requiredSkills": ["React", "TypeScript", "WebGL", "CSS"],
+    "description": "Build collaborative design tools with React and WebGL for interactive user interfaces.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "GitLab",
+    "requiredSkills": ["CI/CD", "Docker", "Kubernetes", "Git"],
+    "description": "Manage CI/CD pipelines and containerized deployments using Docker and Kubernetes for GitLab platforms.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "AI Product Manager",
+    "company": "Anthropic",
+    "requiredSkills": ["Agile", "AI Ethics", "Product Roadmapping", "Python"],
+    "description": "Lead AI product development with a focus on ethics and scalability using Agile methodologies.",
+    "salaryRange": "$140,000-$200,000"
+  },
+  {
+    "title": "Database Engineer",
+    "company": "MongoDB",
+    "requiredSkills": ["MongoDB", "NoSQL", "Python", "Cloud"],
+    "description": "Optimize and manage NoSQL databases using MongoDB for cloud-based applications.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Stripe",
+    "requiredSkills": ["Ruby", "Rails", "PostgreSQL", "API Design"],
+    "description": "Develop payment processing systems using Ruby on Rails with PostgreSQL for data storage.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Airtable",
+    "requiredSkills": ["Python", "SQL", "Tableau", "Machine Learning"],
+    "description": "Analyze data and build predictive models to enhance productivity tools using Python and Tableau.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "HashiCorp",
+    "requiredSkills": ["Terraform", "Vault", "Go", "Kubernetes"],
+    "description": "Ensure infrastructure reliability using Terraform and Vault for secure, scalable deployments.",
+    "salaryRange": "$120,000-$170,000"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "Snapchat",
+    "requiredSkills": ["Swift", "Kotlin", "AR Development"],
+    "description": "Create engaging mobile experiences with AR features using Swift and Kotlin.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Blockchain Engineer",
+    "company": "Binance",
+    "requiredSkills": ["Solidity", "Rust", "Web3.js", "Smart Contracts"],
+    "description": "Develop blockchain protocols and smart contracts using Solidity and Rust for decentralized finance.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Canva",
+    "requiredSkills": ["React", "TypeScript", "CSS", "Figma"],
+    "description": "Build intuitive design tools with React and TypeScript for creative workflows.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Cloud Security Engineer",
+    "company": "Zscaler",
+    "requiredSkills": ["AWS", "Azure", "SIEM", "Cloud Security"],
+    "description": "Implement cloud security measures and monitor threats using AWS, Azure, and SIEM tools.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Asana",
+    "requiredSkills": ["React", "Node.js", "TypeScript", "GraphQL"],
+    "description": "Develop productivity tools with React and Node.js, integrating GraphQL for efficient data queries.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Cruise",
+    "requiredSkills": ["Python", "TensorFlow", "ROS", "Deep Learning"],
+    "description": "Build AI models for autonomous vehicles using TensorFlow and ROS for real-time processing.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Network Engineer",
+    "company": "Arista Networks",
+    "requiredSkills": ["BGP", "OSPF", "Python", "Network Automation"],
+    "description": "Design and automate high-performance networks using BGP, OSPF, and Python scripting.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Zoom",
+    "requiredSkills": ["JavaScript", "Node.js", "WebRTC", "React"],
+    "description": "Develop video conferencing solutions using WebRTC and React for seamless user experiences.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Data Analyst",
+    "company": "Looker",
+    "requiredSkills": ["SQL", "Looker", "Python", "Data Visualization"],
+    "description": "Create actionable insights through data visualizations using Looker and SQL.",
+    "salaryRange": "$85,000-$125,000"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "New Relic",
+    "requiredSkills": ["Kubernetes", "Docker", "Terraform", "Monitoring"],
+    "description": "Manage observability platforms with Kubernetes and Terraform for real-time monitoring.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Pinterest",
+    "requiredSkills": ["Python", "Django", "MySQL", "Redis"],
+    "description": "Build backend systems for content discovery using Python, Django, and MySQL.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "AI Researcher",
+    "company": "DeepMind",
+    "requiredSkills": ["Python", "TensorFlow", "Deep Learning", "Reinforcement Learning"],
+    "description": "Conduct cutting-edge research in reinforcement learning and deep learning for AI advancements.",
+    "salaryRange": "$150,000-$220,000"
+  },
+  {
+    "title": "Cloud Architect",
+    "company": "DigitalOcean",
+    "requiredSkills": ["Kubernetes", "Terraform", "Linux", "Cloud Native"],
+    "description": "Design cloud-native architectures for scalable applications using Kubernetes and Terraform.",
+    "salaryRange": "$125,000-$175,000"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "Tinder",
+    "requiredSkills": ["Swift", "Kotlin", "React Native"],
+    "description": "Develop engaging mobile apps for social networking using Swift, Kotlin, and React Native.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "Security Engineer",
+    "company": "Okta",
+    "requiredSkills": ["OAuth", "SAML", "Python", "Cloud Security"],
+    "description": "Implement identity and access management solutions with OAuth and SAML for secure authentication.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Full Stack Engineer",
+    "company": "Notion",
+    "requiredSkills": ["React", "Node.js", "TypeScript", "PostgreSQL"],
+    "description": "Build productivity tools with React and Node.js, integrating PostgreSQL for data management.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Confluent",
+    "requiredSkills": ["Kafka", "Spark", "Python", "SQL"],
+    "description": "Develop real-time data streaming pipelines using Kafka and Spark for big data applications.",
+    "salaryRange": "$120,000-$170,000"
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Vercel",
+    "requiredSkills": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "description": "Build serverless web applications using Next.js and React with Tailwind CSS for styling.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Hugging Face",
+    "requiredSkills": ["Python", "Transformers", "PyTorch", "NLP"],
+    "description": "Develop NLP models using Hugging Face Transformers and PyTorch for AI applications.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Datadog",
+    "requiredSkills": ["Python", "Kubernetes", "Prometheus", "AWS"],
+    "description": "Ensure system reliability with Kubernetes and Prometheus for observability on AWS.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Blockchain Developer",
+    "company": "Chainlink",
+    "requiredSkills": ["Solidity", "Ethereum", "Web3.js", "Go"],
+    "description": "Build decentralized oracle networks using Solidity and Web3.js for blockchain integration.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Twilio",
+    "requiredSkills": ["Python", "JavaScript", "REST APIs", "AWS"],
+    "description": "Develop communication APIs using Python and JavaScript for cloud-based solutions.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Snowflake",
+    "requiredSkills": ["Python", "SQL", "Snowflake", "Machine Learning"],
+    "description": "Analyze data and build predictive models using Snowflake and Python for cloud analytics.",
+    "salaryRange": "$120,000-$170,000"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "CircleCI",
+    "requiredSkills": ["CI/CD", "Docker", "Kubernetes", "Terraform"],
+    "description": "Manage CI/CD pipelines and containerized deployments using Docker and Kubernetes.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Reddit",
+    "requiredSkills": ["Python", "Django", "PostgreSQL", "Redis"],
+    "description": "Build scalable backend systems for social platforms using Python, Django, and PostgreSQL.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Webflow",
+    "requiredSkills": ["React", "TypeScript", "CSS", "WebGL"],
+    "description": "Create dynamic web interfaces using React and WebGL for no-code platforms.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "AI Engineer",
+    "company": "xAI",
+    "requiredSkills": ["Python", "TensorFlow", "PyTorch", "Deep Learning"],
+    "description": "Develop AI models to accelerate human scientific discovery using TensorFlow and PyTorch.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "Heroku",
+    "requiredSkills": ["AWS", "PostgreSQL", "Node.js", "Terraform"],
+    "description": "Manage cloud infrastructure for web applications using AWS and Terraform.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "Instagram",
+    "requiredSkills": ["Swift", "Kotlin", "React Native"],
+    "description": "Build mobile features for social media platforms using Swift, Kotlin, and React Native.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Security Engineer",
+    "company": "Auth0",
+    "requiredSkills": ["OAuth", "SAML", "Python", "Cloud Security"],
+    "description": "Implement secure authentication systems using OAuth and SAML for cloud applications.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Trello",
+    "requiredSkills": ["React", "Node.js", "MongoDB", "TypeScript"],
+    "description": "Develop project management tools with React and Node.js, integrating MongoDB for data storage.",
+    "salaryRange": "$105,000-$155,000"
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Fivetran",
+    "requiredSkills": ["Python", "SQL", "ETL", "Snowflake"],
+    "description": "Build automated data pipelines using Python and Snowflake for seamless data integration.",
+    "salaryRange": "$120,000-$170,000"
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Intercom",
+    "requiredSkills": ["React", "TypeScript", "CSS", "GraphQL"],
+    "description": "Create customer communication interfaces using React and GraphQL for real-time interactions.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Scale AI",
+    "requiredSkills": ["Python", "TensorFlow", "PyTorch", "Data Annotation"],
+    "description": "Develop AI training pipelines with TensorFlow and PyTorch for scalable data annotation.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Sentry",
+    "requiredSkills": ["Python", "Kubernetes", "Prometheus", "AWS"],
+    "description": "Monitor and maintain application performance using Kubernetes and Prometheus on AWS.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "Blockchain Developer",
+    "company": "Polygon",
+    "requiredSkills": ["Solidity", "Ethereum", "Web3.js", "Rust"],
+    "description": "Build scalable blockchain solutions using Solidity and Rust for Ethereum-based applications.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Software Engineer",
+    "company": "HubSpot",
+    "requiredSkills": ["Java", "Spring", "React", "MySQL"],
+    "description": "Develop CRM solutions using Java, Spring, and React with MySQL for data management.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Zillow",
+    "requiredSkills": ["Python", "SQL", "Machine Learning", "Tableau"],
+    "description": "Analyze real estate data and build predictive models using Python and Tableau.",
+    "salaryRange": "$115,000-$165,000"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "GitHub",
+    "requiredSkills": ["CI/CD", "Docker", "Kubernetes", "Terraform"],
+    "description": "Manage CI/CD pipelines and containerized deployments for developer platforms using Docker and Kubernetes.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "Etsy",
+    "requiredSkills": ["PHP", "MySQL", "Node.js", "Redis"],
+    "description": "Build backend systems for e-commerce platforms using PHP, Node.js, and MySQL.",
+    "salaryRange": "$100,000-$150,000"
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Wix",
+    "requiredSkills": ["React", "TypeScript", "CSS", "HTML"],
+    "description": "Create customizable web interfaces using React and TypeScript for website builders.",
+    "salaryRange": "$95,000-$140,000"
+  },
+  {
+    "title": "AI Engineer",
+    "company": "Cohere",
+    "requiredSkills": ["Python", "NLP", "PyTorch", "Transformers"],
+    "description": "Develop NLP solutions using PyTorch and Transformers for text generation and analysis.",
+    "salaryRange": "$130,000-$190,000"
+  },
+  {
+    "title": "Cloud Engineer",
+    "company": "Akamai",
+    "requiredSkills": ["AWS", "Linux", "Terraform", "CDN"],
+    "description": "Manage content delivery networks and cloud infrastructure using AWS and Terraform.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "DoorDash",
+    "requiredSkills": ["Swift", "Kotlin", "Flutter"],
+    "description": "Build mobile apps for food delivery platforms using Swift, Kotlin, and Flutter.",
+    "salaryRange": "$100,000-$145,000"
+  },
+  {
+    "title": "Security Engineer",
+    "company": "1Password",
+    "requiredSkills": ["Python", "Cloud Security", "OAuth", "SIEM"],
+    "description": "Develop secure password management solutions with OAuth and cloud security practices.",
+    "salaryRange": "$110,000-$160,000"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Monday.com",
+    "requiredSkills": ["React", "Node.js", "TypeScript", "GraphQL"],
+    "description": "Build project management tools with React and Node.js, using GraphQL for data queries.",
+    "salaryRange": "$105,000-$155,000"
+  }
+]

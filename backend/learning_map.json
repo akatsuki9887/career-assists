@@ -1,0 +1,548 @@
+{
+  "Python": {
+    "resources": [
+      {"title": "Python Crash Course", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"},
+      {"title": "Python Official Documentation", "url": "https://docs.python.org/3/"},
+      {"title": "Learn Python - Full Course for Beginners", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw"},
+      {"title": "Real Python Tutorials", "url": "https://realpython.com/"}
+    ],
+    "project": {
+      "title": "Build a Calculator App",
+      "url": "https://realpython.com/python-project-ideas/#calculator"
+    },
+    "time": "3 days"
+  },
+  "SQL": {
+    "resources": [
+      {"title": "SQLZoo Interactive Tutorials", "url": "https://sqlzoo.net/"},
+      {"title": "Mode SQL Tutorial", "url": "https://mode.com/sql-tutorial/"},
+      {"title": "W3Schools SQL Tutorial", "url": "https://www.w3schools.com/sql/"},
+      {"title": "PostgreSQL Exercises", "url": "https://pgexercises.com/"}
+    ],
+    "project": {
+      "title": "Design Analytics Schema with Queries",
+      "url": "https://www.sqlitetutorial.net/sqlite-sample-database/"
+    },
+    "time": "5 days"
+  },
+  "AWS": {
+    "resources": [
+      {"title": "AWS Certified Solutions Architect Course", "url": "https://www.youtube.com/watch?v=Ia-UEYYR44s"},
+      {"title": "AWS Official Documentation", "url": "https://docs.aws.amazon.com/"},
+      {"title": "AWS Training and Certification", "url": "https://aws.amazon.com/training/"},
+      {"title": "Cloud Academy AWS", "url": "https://cloudacademy.com/learning-paths/aws/"}
+    ],
+    "project": {
+      "title": "Deploy a Serverless Web App",
+      "url": "https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/"}
+    ,
+    "time": "5 days"
+  },
+  "Docker": {
+    "resources": [
+      {"title": "Docker in 100 Seconds", "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ"},
+      {"title": "Docker Official Documentation", "url": "https://docs.docker.com/get-started/"},
+      {"title": "Docker Crash Course", "url": "https://www.youtube.com/watch?v=pg19Z8LL06I"},
+      {"title": "Docker Tutorials by TechWorld", "url": "https://www.youtube.com/playlist?list=PLu0W_9lB4MxxL3BnhsW4Z4gq1BSC3l2yV"}
+    ],
+    "project": {
+      "title": "Dockerize a FastAPI + React App",
+      "url": "https://testdriven.io/blog/dockerizing-fastapi-and-react/"}
+    ,
+    "time": "3 days"
+  },
+  "Docker Compose": {
+    "resources": [
+      {"title": "Docker Compose Official Documentation", "url": "https://docs.docker.com/compose/"},
+      {"title": "freeCodeCamp Docker Compose Tutorial", "url": "https://www.freecodecamp.org/news/docker-compose-tutorial/"},
+      {"title": "Real Python Docker Compose Guide", "url": "https://realpython.com/docker-compose-python-development/"},
+      {"title": "Docker Compose Tutorial by Nana", "url": "https://www.youtube.com/watch?v=DM65_Jy4Yz4"}
+    ],
+    "project": {
+      "title": "Multi-Container App with Docker Compose",
+      "url": "https://docs.docker.com/compose/gettingstarted/"}
+    ,
+    "time": "3 days"
+  },
+  "Helm": {
+    "resources": [
+      {"title": "Helm Quickstart Guide", "url": "https://helm.sh/docs/intro/quickstart/"},
+      {"title": "freeCodeCamp Helm Tutorial", "url": "https://www.freecodecamp.org/news/helm-kubernetes-tutorial/"},
+      {"title": "CNCF Helm Training", "url": "https://www.cncf.io/training/helm/"},
+      {"title": "Helm Tutorial by TechWorld", "url": "https://www.youtube.com/watch?v=-ykwb1d0DXU"}
+    ],
+    "project": {
+      "title": "Deploy Application with Helm Chart",
+      "url": "https://helm.sh/docs/intro/quickstart/"}
+    ,
+    "time": "3 days"
+  },
+  "Istio": {
+    "resources": [
+      {"title": "Istio Getting Started Guide", "url": "https://istio.io/latest/docs/setup/getting-started/"},
+      {"title": "freeCodeCamp Istio Tutorial", "url": "https://www.freecodecamp.org/news/istio-service-mesh-tutorial/"},
+      {"title": "Linux Foundation Istio Training", "url": "https://training.linuxfoundation.org/training/introduction-to-istio-lfs144/"},
+      {"title": "Istio by Example", "url": "https://www.youtube.com/watch?v=7aqqT0Ebl64"}
+    ],
+    "project": {
+      "title": "Set Up a Service Mesh with Istio",
+      "url": "https://istio.io/latest/docs/examples/microservices-istio/"}
+    ,
+    "time": "5 days"
+  },
+  "React": {
+    "resources": [
+      {"title": "React Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=RVFAyFWO4go"},
+      {"title": "React Official Documentation", "url": "https://react.dev/"},
+      {"title": "React Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=bMknfKXIFA8"},
+      {"title": "React Docs by W3Schools", "url": "https://www.w3schools.com/react/"}
+    ],
+    "project": {
+      "title": "Build a Todo App with React",
+      "url": "https://react.dev/learn/tutorial-tic-tac-toe"}
+    ,
+    "time": "4 days"
+  },
+  "Node.js": {
+    "resources": [
+      {"title": "Node.js Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"},
+      {"title": "Node.js Official Documentation", "url": "https://nodejs.org/docs/"},
+      {"title": "Node.js Crash Course", "url": "https://www.youtube.com/watch?v=zb3Qk8SG5Ms"},
+      {"title": "The Odin Project Node.js", "url": "https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs"}
+    ],
+    "project": {
+      "title": "Build a REST API with Node.js",
+      "url": "https://www.theodinproject.com/lessons/nodejs-express-101"}
+    ,
+    "time": "3 days"
+  },
+  "PostgreSQL": {
+    "resources": [
+      {"title": "PostgreSQL Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=qw--VYLpxG4"},
+      {"title": "PostgreSQL Official Documentation", "url": "https://www.postgresql.org/docs/"},
+      {"title": "PostgreSQL Tutorial by freeCodeCamp", "url": "https://www.youtube.com/watch?v=ksULcIaL7jE"},
+      {"title": "PostgreSQL Exercises", "url": "https://www.pgexercises.com/"}
+    ],
+    "project": {
+      "title": "Design a Database with PostgreSQL",
+      "url": "https://www.postgresqltutorial.com/postgresql-getting-started/"}
+    ,
+    "time": "4 days"
+  },
+  "Express": {
+    "resources": [
+      {"title": "Express.js Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"},
+      {"title": "Express.js Official Documentation", "url": "https://expressjs.com/"},
+      {"title": "Express.js Crash Course", "url": "https://www.youtube.com/watch?v=L72fhGm1tfE"},
+      {"title": "Express Tutorial by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJUpsSM7zcrO7D5"}
+    ],
+    "project": {
+      "title": "Build a REST API with Express",
+      "url": "https://expressjs.com/en/starter/basic-routing.html"}
+    ,
+    "time": "3 days"
+  },
+  "ETL": {
+    "resources": [
+      {"title": "ETL Concepts Explained", "url": "https://www.youtube.com/watch?v=5r3r4f3H4B0"},
+      {"title": "Talend ETL Best Practices", "url": "https://www.talend.com/resources/what-is-etl/"},
+      {"title": "ETL Tutorial by Simplilearn", "url": "https://www.youtube.com/watch?v=1T0R4j23rYc"},
+      {"title": "ETL with Apache Airflow", "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html"}
+    ],
+    "project": {
+      "title": "Build an ETL Pipeline for CSV Data",
+      "url": "https://www.talend.com/resources/how-to-build-an-etl-pipeline/"}
+    ,
+    "time": "3 days"
+  },
+  "Kubernetes": {
+    "resources": [
+      {"title": "Kubernetes Basics on Udemy", "url": "https://www.udemy.com/course/learn-kubernetes"},
+      {"title": "Kubernetes Official Documentation", "url": "https://kubernetes.io/docs/"},
+      {"title": "Kubernetes Tutorial by TechWorld", "url": "https://www.youtube.com/watch?v=X48VuDVv0do"},
+      {"title": "Kubernetes Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=s_o8ugFrv68"}
+    ],
+    "project": {
+      "title": "Deploy an App to Kubernetes",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/"}
+    ,
+    "time": "4 days"
+  },
+  "TypeScript": {
+    "resources": [
+      {"title": "TypeScript Crash Course", "url": "https://www.youtube.com/watch?v=BCg4U1FzODs"},
+      {"title": "TypeScript Official Documentation", "url": "https://www.typescriptlang.org/docs/"},
+      {"title": "TypeScript Tutorial by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI"},
+      {"title": "TypeScript for Beginners", "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs"}
+    ],
+    "project": {
+      "title": "Build a TypeScript Portfolio",
+      "url": "https://www.typescriptlang.org/docs/handbook/react.html"}
+    ,
+    "time": "3 days"
+  },
+  "MongoDB": {
+    "resources": [
+      {"title": "MongoDB Crash Course", "url": "https://www.youtube.com/watch?v=ofme2o29-yU"},
+      {"title": "MongoDB Official Documentation", "url": "https://www.mongodb.com/docs/"},
+      {"title": "MongoDB University", "url": "https://university.mongodb.com/"},
+      {"title": "MongoDB Tutorial by freeCodeCamp", "url": "https://www.youtube.com/watch?v=c2M-rlkkT5o"}
+    ],
+    "project": {
+      "title": "Build a NoSQL Database with MongoDB",
+      "url": "https://www.mongodb.com/basics/get-started"}
+    ,
+    "time": "4 days"
+  },
+  "JavaScript": {
+    "resources": [
+      {"title": "JavaScript Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk"},
+      {"title": "MDN JavaScript Documentation", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
+      {"title": "JavaScript Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"},
+      {"title": "Eloquent JavaScript Book", "url": "https://eloquentjavascript.net/"}
+    ],
+    "project": {
+      "title": "Build a To-Do List App",
+      "url": "https://www.theodinproject.com/lessons/node-path-javascript-todo-list"}
+    ,
+    "time": "3 days"
+  },
+  "React Native": {
+    "resources": [
+      {"title": "React Native Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=0-S5a0eKiOc"},
+      {"title": "React Native Official Documentation", "url": "https://reactnative.dev/docs/getting-started"},
+      {"title": "React Native Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=1hPgQWbWmEk"},
+      {"title": "React Native by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBikL9Q1zN9F"}
+    ],
+    "project": {
+      "title": "Build a Mobile To-Do App",
+      "url": "https://reactnative.dev/docs/tutorial"}
+    ,
+    "time": "4 days"
+  },
+  "TensorFlow": {
+    "resources": [
+      {"title": "TensorFlow Basics Tutorial", "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk"},
+      {"title": "TensorFlow Official Documentation", "url": "https://www.tensorflow.org/learn"},
+      {"title": "TensorFlow Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=Yr1mOzC93xs"},
+      {"title": "Deep Learning with TensorFlow", "url": "https://www.tensorflow.org/tutorials"}
+    ],
+    "project": {
+      "title": "Image Classification Model",
+      "url": "https://www.tensorflow.org/tutorials/images/classification"}
+    ,
+    "time": "5 days"
+  },
+  "PyTorch": {
+    "resources": [
+      {"title": "PyTorch Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=c36lUUr864M"},
+      {"title": "PyTorch Official Documentation", "url": "https://pytorch.org/docs/stable/index.html"},
+      {"title": "PyTorch Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=EMXfZB8FVUA"},
+      {"title": "Deep Learning with PyTorch", "url": "https://pytorch.org/tutorials/"}
+    ],
+    "project": {
+      "title": "Build a Neural Network with PyTorch",
+      "url": "https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html"}
+    ,
+    "time": "5 days"
+  },
+  "Java": {
+    "resources": [
+      {"title": "Java Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"},
+      {"title": "Oracle Java Documentation", "url": "https://docs.oracle.com/en/java/"},
+      {"title": "Java Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=GoXwIVyNvX0"},
+      {"title": "Java Programming by W3Schools", "url": "https://www.w3schools.com/java/"}
+    ],
+    "project": {
+      "title": "Build a Java Calculator",
+      "url": "https://www.javatpoint.com/calculator-in-java"}
+    ,
+    "time": "4 days"
+  },
+  "Spring": {
+    "resources": [
+      {"title": "Spring Boot Tutorial", "url": "https://www.youtube.com/watch?v=9SGDpanrc8U"},
+      {"title": "Spring Official Documentation", "url": "https://spring.io/projects/spring-boot"},
+      {"title": "Spring Boot Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=vtPkZShrvXQ"},
+      {"title": "Spring by Baeldung", "url": "https://www.baeldung.com/spring-boot"}
+    ],
+    "project": {
+      "title": "Build a REST API with Spring Boot",
+      "url": "https://spring.io/guides/gs/rest-service/"}
+    ,
+    "time": "4 days"
+  },
+  "C++": {
+    "resources": [
+      {"title": "C++ Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"},
+      {"title": "C++ Reference", "url": "https://en.cppreference.com/w/"},
+      {"title": "C++ Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=8jLOx1hD3_o"},
+      {"title": "Learn C++", "url": "https://www.learncpp.com/"}
+    ],
+    "project": {
+      "title": "Build a Simple Game in C++",
+      "url": "https://www.learncpp.com/cpp-tutorial/game-programming/"}
+    ,
+    "time": "5 days"
+  },
+  "Go": {
+    "resources": [
+      {"title": "Go Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=YS4e4q9Vr6E"},
+      {"title": "Go Official Documentation", "url": "https://go.dev/doc/"},
+      {"title": "Go by Example", "url": "https://gobyexample.com/"},
+      {"title": "Go Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=un6ZyFkqFKo"}
+    ],
+    "project": {
+      "title": "Build a CLI Tool in Go",
+      "url": "https://go.dev/doc/tutorial/create-module"}
+    ,
+    "time": "3 days"
+  },
+  "Terraform": {
+    "resources": [
+      {"title": "Terraform Tutorial", "url": "https://www.youtube.com/watch?v=SLB_c_ayRMo"},
+      {"title": "Terraform Official Documentation", "url": "https://www.terraform.io/docs"},
+      {"title": "Terraform Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=tomUWcQ0X8k"},
+      {"title": "HashiCorp Learn Terraform", "url": "https://learn.hashicorp.com/terraform"}
+    ],
+    "project": {
+      "title": "Deploy Infrastructure with Terraform",
+      "url": "https://learn.hashicorp.com/tutorials/terraform/install-cli"}
+    ,
+    "time": "3 days"
+  },
+  "Ansible": {
+    "resources": [
+      {"title": "Ansible Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=8kJDis2nec8"},
+      {"title": "Ansible Official Documentation", "url": "https://docs.ansible.com/"},
+      {"title": "Ansible by Red Hat", "url": "https://www.redhat.com/en/technologies/management/ansible"},
+      {"title": "Ansible Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=5hycor91AU0"}
+    ],
+    "project": {
+      "title": "Automate Server Setup with Ansible",
+      "url": "https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html"}
+    ,
+    "time": "3 days"
+  },
+  "Solidity": {
+    "resources": [
+      {"title": "Solidity Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=ipwxYa-F1uY"},
+      {"title": "Solidity Official Documentation", "url": "https://docs.soliditylang.org/"},
+      {"title": "CryptoZombies Solidity Course", "url": "https://cryptozombies.io/"},
+      {"title": "Solidity by Example", "url": "https://solidity-by-example.org/"}
+    ],
+    "project": {
+      "title": "Build a Smart Contract",
+      "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html"}
+    ,
+    "time": "4 days"
+  },
+  "Web3.js": {
+    "resources": [
+      {"title": "Web3.js Tutorial", "url": "https://www.youtube.com/watch?v=WgU1P4TWzCI"},
+      {"title": "Web3.js Official Documentation", "url": "https://web3js.readthedocs.io/"},
+      {"title": "Build a DApp with Web3.js", "url": "https://www.dappuniversity.com/articles/web3-js-tutorial"},
+      {"title": "Web3.js Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ"}
+    ],
+    "project": {
+      "title": "Build a DApp with Web3.js",
+      "url": "https://www.dappuniversity.com/articles/web3-js-tutorial"}
+    ,
+    "time": "4 days"
+  },
+  "Selenium": {
+    "resources": [
+      {"title": "Selenium Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=7Bo13eH6kzo"},
+      {"title": "Selenium Official Documentation", "url": "https://www.selenium.dev/documentation/"},
+      {"title": "Selenium Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=5fK9bV6fUkM"},
+      {"title": "Selenium with Python", "url": "https://selenium-python.readthedocs.io/"}
+    ],
+    "project": {
+      "title": "Automate Web Testing with Selenium",
+      "url": "https://www.selenium.dev/documentation/webdriver/getting_started/"}
+    ,
+    "time": "3 days"
+  },
+  "Cypress": {
+    "resources": [
+      {"title": "Cypress Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=7N63c2s8t0o"},
+      {"title": "Cypress Official Documentation", "url": "https://docs.cypress.io/"},
+      {"title": "Cypress Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=5NQ0F2p5K8o"},
+      {"title": "Cypress Testing Tutorial", "url": "https://www.cypress.io/how-it-works"}
+    ],
+    "project": {
+      "title": "End-to-End Testing with Cypress",
+      "url": "https://docs.cypress.io/guides/getting-started/writing-your-first-test"}
+    ,
+    "time": "3 days"
+  },
+  "Swift": {
+    "resources": [
+      {"title": "Swift Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=comQ1-x2a1Q"},
+      {"title": "Swift Official Documentation", "url": "https://docs.swift.org/swift-book/"},
+      {"title": "Swift Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=comQ1-x2a1Q"},
+      {"title": "Hacking with Swift", "url": "https://www.hackingwithswift.com/"}
+    ],
+    "project": {
+      "title": "Build an iOS App with Swift",
+      "url": "https://www.hackingwithswift.com/100"}
+    ,
+    "time": "4 days"
+  },
+  "Kotlin": {
+    "resources": [
+      {"title": "Kotlin Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=F9UC9DY-vIU"},
+      {"title": "Kotlin Official Documentation", "url": "https://kotlinlang.org/docs/home.html"},
+      {"title": "Kotlin Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=EExdk6X1vho"},
+      {"title": "Kotlin by JetBrains", "url": "https://www.jetbrains.com/academy/kotlin"}
+    ],
+    "project": {
+      "title": "Build an Android App with Kotlin",
+      "url": "https://developer.android.com/courses/android-basics-kotlin/course"}
+    ,
+    "time": "4 days"
+  },
+  "Flutter": {
+    "resources": [
+      {"title": "Flutter Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=pTJJsme2Ab0"},
+      {"title": "Flutter Official Documentation", "url": "https://docs.flutter.dev/"},
+      {"title": "Flutter Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=VPvVD8t02U8"},
+      {"title": "Flutter by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ"}
+    ],
+    "project": {
+      "title": "Build a Cross-Platform App with Flutter",
+      "url": "https://docs.flutter.dev/get-started/codelab"}
+    ,
+    "time": "4 days"
+  },
+  "Unity": {
+    "resources": [
+      {"title": "Unity Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=XtQMytORBmM"},
+      {"title": "Unity Official Documentation", "url": "https://docs.unity3d.com/Manual/index.html"},
+      {"title": "Unity Learn", "url": "https://learn.unity.com/"},
+      {"title": "Unity Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=6FfzIgcbTJw"}
+    ],
+    "project": {
+      "title": "Build a 2D Game with Unity",
+      "url": "https://learn.unity.com/project/2d-roguelike"}
+    ,
+    "time": "5 days"
+  },
+  "Unreal Engine": {
+    "resources": [
+      {"title": "Unreal Engine Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=k-zMkzmduqI"},
+      {"title": "Unreal Engine Official Documentation", "url": "https://docs.unrealengine.com/"},
+      {"title": "Unreal Engine Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=Z4Q3uZ5S3Ao"},
+      {"title": "Unreal Engine Tutorials", "url": "https://www.unrealengine.com/en-US/onlinelearning"}
+    ],
+    "project": {
+      "title": "Build a 3D Game with Unreal Engine",
+      "url": "https://www.unrealengine.com/en-US/get-started"}
+    ,
+    "time": "5 days"
+  },
+  "HTML": {
+    "resources": [
+      {"title": "HTML Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=qz0z6Y5A3gM"},
+      {"title": "MDN HTML Documentation", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"},
+      {"title": "W3Schools HTML Tutorial", "url": "https://www.w3schools.com/html/"},
+      {"title": "HTML Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=pQN-pnXPaVg"}
+    ],
+    "project": {
+      "title": "Build a Simple Webpage",
+      "url": "https://www.w3schools.com/html/html_examples.asp"}
+    ,
+    "time": "2 days"
+  },
+  "CSS": {
+    "resources": [
+      {"title": "CSS Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=yfoY53QXEnI"},
+      {"title": "MDN CSS Documentation", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"},
+      {"title": "W3Schools CSS Tutorial", "url": "https://www.w3schools.com/css/"},
+      {"title": "CSS Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=1Rs2ND1ryYc"}
+    ],
+    "project": {
+      "title": "Style a Webpage with CSS",
+      "url": "https://www.w3schools.com/css/css_examples.asp"}
+    ,
+    "time": "2 days"
+  },
+  "Vue.js": {
+    "resources": [
+      {"title": "Vue.js Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=FXpIoQ_rT_c"},
+      {"title": "Vue.js Official Documentation", "url": "https://vuejs.org/guide/introduction.html"},
+      {"title": "Vue.js Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=4deVCNJq3qc"},
+      {"title": "Vue.js by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gC0hH21AB6S8r2m6Oh5tNJ"}
+    ],
+    "project": {
+      "title": "Build a Vue.js Dashboard",
+      "url": "https://vuejs.org/examples/#crud"}
+    ,
+    "time": "3 days"
+  },
+  "Git": {
+    "resources": [
+      {"title": "Git Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=8JJ101D3kn0"},
+      {"title": "Git Official Documentation", "url": "https://git-scm.com/doc"},
+      {"title": "Git Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"},
+      {"title": "Learn Git Branching", "url": "https://learngitbranching.js.org/"}
+    ],
+    "project": {
+      "title": "Set Up a Git Repository",
+      "url": "https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup"}
+    ,
+    "time": "2 days"
+  },
+  "Prometheus": {
+    "resources": [
+      {"title": "Prometheus Tutorial", "url": "https://www.youtube.com/watch?v=h4Sl21AKiDg"},
+      {"title": "Prometheus Official Documentation", "url": "https://prometheus.io/docs/"},
+      {"title": "Prometheus Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=5iWvWGRkS9o"},
+      {"title": "Prometheus Monitoring Guide", "url": "https://prometheus.io/docs/introduction/overview/"}
+    ],
+    "project": {
+      "title": "Set Up Prometheus Monitoring",
+      "url": "https://prometheus.io/docs/prometheus/latest/getting_started/"}
+    ,
+    "time": "3 days"
+  },
+  "GraphQL": {
+    "resources": [
+      {"title": "GraphQL Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=eIQh02xuB5g"},
+      {"title": "GraphQL Official Documentation", "url": "https://graphql.org/learn/"},
+      {"title": "GraphQL Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=ed8SzALpx1Q"},
+      {"title": "Apollo GraphQL Tutorials", "url": "https://www.apollographql.com/docs/"}
+    ],
+    "project": {
+      "title": "Build a GraphQL API",
+      "url": "https://www.apollographql.com/docs/apollo-server/getting-started/"}
+    ,
+    "time": "3 days"
+  },
+  "Tailwind CSS": {
+    "resources": [
+      {"title": "Tailwind CSS Tutorial", "url": "https://www.youtube.com/watch?v=ft30zcMlF7w"},
+      {"title": "Tailwind CSS Official Documentation", "url": "https://tailwindcss.com/docs"},
+      {"title": "Tailwind CSS Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=ELCr9M0S3S0"},
+      {"title": "Tailwind CSS by The Net Ninja", "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEYl5S8eJmuxUEkVo"}
+    ],
+    "project": {
+      "title": "Style a Webpage with Tailwind CSS",
+      "url": "https://tailwindcss.com/docs/installation"}
+    ,
+    "time": "2 days"
+  },
+  "MySQL": {
+    "resources": [
+      {"title": "MySQL Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA"},
+      {"title": "MySQL Official Documentation", "url": "https://dev.mysql.com/doc/"},
+      {"title": "MySQL Course by freeCodeCamp", "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA"},
+      {"title": "MySQL by W3Schools", "url": "https://www.w3schools.com/mysql/"}
+    ],
+    "project": {
+      "title": "Design a MySQL Database",
+      "url": "https://dev.mysql.com/doc/workbench/en/wb-getting-started-tutorial.html"}
+    ,
+    "time": "4 days"
+  }
+}
