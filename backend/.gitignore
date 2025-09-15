@@ -1,0 +1,8 @@
+.env*
+.venv/
+venv/
+logs/
+*.log
+__pycache__/
+*.pyc
+migrations/versions/*.py  # Alembic backups optional

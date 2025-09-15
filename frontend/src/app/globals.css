@@ -1,45 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
-  --surface: #F9FAFB;
-  --surface-2: #FFFFFF;
+  --background: #f9fafb;
+  --surface: #f9fafb; 
+  --surface-2: #ffffff; 
   --surface-2-rgb: 255, 255, 255;
-  --border: #E5E7EB;
-  --muted: #6B7280;
-  --accent: #4A90E2;
-  --text: #1A202C;
+  --border: #d1d5db; 
+  --text: #111827; 
+  --muted: #6b7280; 
+  --accent: #2563eb; 
+  --accent-rgb: 37, 99, 235; 
+  --danger: #EF4444;
+  --secondary: #f9fafb; 
 }
 [data-theme="dark"] {
-  --surface: #1A202C;
-  --surface-2: #2D3748;
-  --surface-2-rgb: 45, 55, 72;
-  --border: #4A5568;
-  --muted: #A0AEC0;
-  --accent: #A3BFFA;
-  --text: #F7FAFC;
+  --background: #111827; 
+  --surface: #111827; 
+  --surface-2: #1f2937;
+  --surface-2-rgb: 31, 41, 55;
+  --border: #374151;
+  --text: #f8fafc; 
+  --muted: #9ca3af; 
+  --accent: #60a5fa; 
+  --accent-rgb: 96, 165, 250; 
+  --danger: #EF4444; 
+  --secondary: #1f2937; 
 }
 @layer base {
   h1 {
-    @apply text-3xl md:text-4xl font-bold tracking-tight font-heading text-text;
+    @apply text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight font-heading text-text;
   }
   h2 {
-    @apply text-2xl font-semibold font-heading text-text;
+    @apply text-sm sm:text-xl md:text-2xl font-semibold font-heading text-text;
   }
   h3 {
-    @apply text-xl font-semibold font-heading text-text;
+    @apply text-xs sm:text-lg md:text-xl font-semibold font-heading text-text;
   }
   p {
-    @apply text-base text-muted;
+    @apply text-[9px] sm:text-base leading-tight sm:leading-relaxed text-muted line-clamp-2;
   }
   small {
-    @apply text-sm text-muted;
+    @apply text-[8px] sm:text-[10px] text-muted;
   }
   body {
-    @apply font-body bg-surface text-text antialiased;
+    @apply font-body bg-surface text-text antialiased transition-colors duration-300;
+  }
+}
+@layer components {
+  .btn {
+    @apply px-0.5 xs:px-1 sm:px-3 py-0.25 xs:py-0.5 sm:py-1.5 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-all duration-200 hover:scale-105 relative;
+  }
+  .btn-hover {
+    @apply hover:shadow-sm;
+  }
+  .btn-hover:hover {
+    background-color: rgba(var(--accent-rgb), 0.2);
+  }
+  .btn-active {
+    @apply font-bold text-accent;
+  }
+  .btn-active::before {
+    content: '';
+    background-color: rgba(var(--accent-rgb), 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: inherit;
+  }
+  .card {
+    @apply bg-surface-2 border border-border rounded-xl shadow-md hover:shadow-xl transition-all duration-200 p-1.5 xs:p-2 sm:p-5 max-w-full glass;
+  }
+  .side-menu {
+    @apply border-l-2 rounded-l-xl shadow-lg backdrop-blur-sm;
+    border-color: rgba(var(--accent-rgb), 0.3);
+    background-color: rgba(var(--surface-2-rgb), 0.8);
   }
 }
 @layer utilities {
+  .truncate-mobile {
+    @apply overflow-hidden line-clamp-2;
+  }
   .animate-bounce-slow {
     animation: bounce 3s infinite;
   }
@@ -54,7 +99,47 @@
   }
   .glass {
     @apply backdrop-blur-md border border-border border-opacity-50;
-    background-color: rgba(var(--surface-2-rgb), 0.3);
+    background-color: rgba(var(--surface-2-rgb), 0.7);
+  }
+}
+@media (max-width: 300px) {
+  .btn {
+    @apply px-0.5 py-0.25 text-[8px];
+  }
+  .card {
+    @apply p-1;
+  }
+  h1 { @apply text-sm; }
+  h2 { @apply text-[10px]; }
+  h3 { @apply text-[9px]; }
+  p { @apply text-[8px]; }
+  .side-menu { @apply w-56; }
+}
+@media (max-width: 400px) {
+  nav .flex.items-center {
+    gap: 0.25rem;
+  }
+  .btn {
+    @apply px-0.75 py-0.25 text-[9px];
+  }
+  .card {
+    @apply p-1.5;
+  }
+  h1 { @apply text-base; }
+  h2 { @apply text-sm; }
+  h3 { @apply text-[10px]; }
+  p { @apply text-[9px]; }
+  .side-menu { @apply w-64; }
+}
+@media (max-width: 640px) {
+  nav .flex.items-center {
+    gap: 0.5rem;
+  }
+  .btn {
+    @apply px-1 py-0.5 text-[9px];
+  }
+  .card {
+    @apply p-2;
   }
 }
 @media (prefers-reduced-motion) {
@@ -69,29 +154,15 @@
 }
 @layer utilities {
   @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
   }
   @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
   @keyframes lift {
-    0% {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    100% {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
+    0% { transform: translateY(0); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+    100% { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
   }
 }

@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils"
+// src/components/ui/skeleton.tsx
+import { cn } from '@/lib/utils';
 
 function Skeleton({
   className,
@@ -6,11 +7,11 @@ function Skeleton({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("animate-pulse rounded-md bg-primary/10 bg-gradient-to-r from-primary/10 to-primary/5", className)}
+      className={cn('animate-pulse rounded-xl bg-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 hover:scale-105 transition-transform duration-150', className)}
       aria-hidden="true"
       {...props}
     />
-  )
+  );
 }
 
-export { Skeleton }
+export { Skeleton };

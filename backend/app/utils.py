@@ -9,13 +9,9 @@ from typing import List, Dict, Any
 from pathlib import Path
 import logging
 import os
-
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
-
 ROOT = Path(__file__).resolve().parent.parent
-
-# Validate JSON structure
 def validate_learning_map(data: Dict) -> bool:
     """Validate learning_map.json structure."""
     for skill, entry in data.items():
@@ -39,43 +35,35 @@ def validate_learning_map(data: Dict) -> bool:
             logger.error(f"Invalid project in skill {skill}: missing title or url")
             return False
     return True
-
 try:
     skills_path = ROOT / "skills.json"
     jobs_path = ROOT / "jobs.json"
     learning_map_path = ROOT / "learning_map.json"
-
     for path in [skills_path, jobs_path, learning_map_path]:
         if not path.exists():
             raise FileNotFoundError(f"{path.name} not found at {path}")
-
     SKILLS = json.loads(skills_path.read_text())
     JOBS = json.loads(jobs_path.read_text())
     with open(learning_map_path) as f:
         LEARNING_MAP = json.load(f)
-
     if not validate_learning_map(LEARNING_MAP):
-        raise ValueError("Invalid learning_map.json structure")
-    
+        raise ValueError("Invalid learning_map.json structure")    
     logger.info("Successfully loaded and validated skills.json, jobs.json, and learning_map.json")
 except Exception as e:
     logger.error(f"Failed to load JSON files: {str(e)}")
     raise Exception(f"Failed to load required data files: {str(e)}")
-
 JOB_TEXTS = [j.get("description", "") for j in JOBS]
 MODEL = SentenceTransformer("all-MiniLM-L6-v2")
 JOB_EMB = MODEL.encode(JOB_TEXTS, normalize_embeddings=True)
 index = faiss.IndexFlatIP(JOB_EMB.shape[1])
 index.add(JOB_EMB.astype("float32"))
 logger.info("FAISS index initialized with job embeddings")
-
 try:
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer"])
     logger.info("spaCy model loaded successfully")
 except Exception as e:
     nlp = None
     logger.warning(f"Failed to load spaCy model: {str(e)}")
-
 def extract_text_from_pdf(file_path: str) -> str:
     """Extract text from a PDF file."""
     try:
@@ -100,7 +88,6 @@ def extract_text_from_pdf(file_path: str) -> str:
                 logger.info(f"Deleted temporary file {file_path}")
             except Exception as e:
                 logger.warning(f"Failed to delete temp file {file_path}: {str(e)}")
-
 def extract_skills(text: str) -> List[str]:
     """Extract skills from text using regex and optional spaCy, handling synonyms."""
     try:
@@ -126,7 +113,6 @@ def extract_skills(text: str) -> List[str]:
     except Exception as e:
         logger.error(f"Skill extraction failed: {str(e)}")
         raise ValueError(f"Skill extraction failed: {str(e)}")
-
 def match_jobs(resume_text: str, top_k: int = 5) -> List[Dict[str, Any]]:
     """Match resume text to jobs using FAISS and keyword overlap."""
     try:
@@ -156,7 +142,6 @@ def match_jobs(resume_text: str, top_k: int = 5) -> List[Dict[str, Any]]:
     except Exception as e:
         logger.error(f"Job matching failed: {str(e)}")
         raise ValueError(f"Job matching failed: {str(e)}")
-
 def generate_learning_plan(missing_skills: List[str], matched_jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Generate a learning plan prioritizing top job's missing skills."""
     try:
@@ -199,7 +184,6 @@ def generate_learning_plan(missing_skills: List[str], matched_jobs: List[Dict[st
     except Exception as e:
         logger.error(f"Learning plan generation failed: {str(e)}")
         raise ValueError(f"Learning plan generation failed: {str(e)}")
-
 def generate_evidence(text: str, skills: List[str]) -> Dict[str, Any]:
     """Generate evidence for skills from resume and job descriptions."""
     try:
