@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
@@ -13,8 +13,8 @@ COPY requirements.txt .
 # Upgrade pip
 RUN pip install --upgrade pip
 
-# Install torch CPU version compatible with Python 3.12
-RUN pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
+# Install torch CPU version compatible with Python 3.11
+RUN pip install torch==2.2.2+cpu --index-url https://download.pytorch.org/whl/cpu
 
 # Install remaining dependencies (without torch)
 RUN pip install --no-cache-dir -r requirements.txt
