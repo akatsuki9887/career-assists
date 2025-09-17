@@ -1,0 +1,7 @@
+job_emb_cache.pkl
+*.pkl
+*.pdf
+__pycache__/
+*.pyc
+/venv/
+*.log

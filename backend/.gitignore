@@ -6,6 +6,8 @@ logs/
 __pycache__/
 *.pyc
 migrations/versions/*.py  # Alembic backups optional
-
+job_emb_cache.pkl
 backend/wheels/
 *.whl
+*.pkl
+*.pdf
