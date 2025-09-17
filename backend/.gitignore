@@ -11,3 +11,13 @@ backend/wheels/
 *.whl
 *.pkl
 *.pdf
+__pycache__/
+*.pyc
+job_emb_cache.pkl
+*.pkl
+*.pdf
+*.log
+/venv/
+/.env
+migrations/versions/*.py
+logs/

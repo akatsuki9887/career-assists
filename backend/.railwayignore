@@ -3,5 +3,8 @@ job_emb_cache.pkl
 *.pdf
 __pycache__/
 *.pyc
-/venv/
 *.log
+/venv/
+/.env
+migrations/versions/*.py
+logs/
