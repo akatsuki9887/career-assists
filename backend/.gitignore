@@ -1,16 +1,3 @@
-.env*
-.venv/
-venv/
-logs/
-*.log
-__pycache__/
-*.pyc
-migrations/versions/*.py  # Alembic backups optional
-job_emb_cache.pkl
-backend/wheels/
-*.whl
-*.pkl
-*.pdf
 __pycache__/
 *.pyc
 job_emb_cache.pkl
