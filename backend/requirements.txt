@@ -11,7 +11,7 @@ alembic==1.8.1
 python-jose[cryptography]==3.3.0
 python-dotenv==1.0.0
 slowapi==0.1.9
-torch==1.12.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.2.0 --index-url https://download.pytorch.org/whl/cpu
 memory_profiler==0.61.0
 psutil==5.9.0
 python-multipart==0.0.6
