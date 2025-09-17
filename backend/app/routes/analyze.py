@@ -14,10 +14,16 @@ from app.utils import (extract_text_from_pdf,extract_skills,match_jobs,generate_
 from app.auth import get_current_user
 from app.db import get_session
 from app.models import Analysis, User, GitHubProfile
+import gc
+import torch
+from memory_profiler import profile
+
 router = APIRouter(prefix="/api", tags=["resume"])
 logger = logging.getLogger(__name__)
+
 class GitHubToken(BaseModel):
     token: str
+
 async def get_or_create_user(
     session: AsyncSession,
     email: str,
@@ -33,6 +39,8 @@ async def get_or_create_user(
         await session.commit()
         await session.refresh(user)
     return user
+
+@profile
 @router.post("/analyze")
 async def analyze_resume(
     file: UploadFile = File(...),
@@ -90,6 +98,8 @@ async def analyze_resume(
         session.add(analysis)
         await session.commit()
         await session.refresh(analysis)
+        gc.collect()
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
         return {**result, "analysis_id": analysis.id}
     except HTTPException:
         raise
@@ -100,6 +110,9 @@ async def analyze_resume(
         if temp_path and os.path.exists(temp_path):
             os.unlink(temp_path)
             logger.info(f"Deleted temporary file {temp_path}")
+        gc.collect()
+
+@profile
 @router.post("/github-integrate")
 async def github_integrate(
     github_token: GitHubToken,
@@ -134,7 +147,7 @@ async def github_integrate(
         repos = repos_response.json()
         if not isinstance(repos, list):
             raise HTTPException(status_code=400, detail="Invalid GitHub response format")
-        repos = repos[:20]
+        repos = repos[:10]  # Reduced to 10 repos to lower memory
         github_evidence: Dict[str, List[str]] = {}
         for repo in repos:
             if not isinstance(repo, dict) or "name" not in repo or "owner" not in repo:
@@ -196,12 +209,15 @@ async def github_integrate(
             )
             session.add(profile)
         await session.commit()
+        gc.collect()
         return github_evidence
     except HTTPException:
         raise
     except Exception as e:
         logger.exception(f"GitHub integration error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"GitHub integration failed: {str(e)}")
+
+@profile
 @router.get("/recommendations")
 async def get_recommendations(
     skills: str = "",
@@ -212,7 +228,7 @@ async def get_recommendations(
         if not skills.strip():
             raise HTTPException(status_code=400, detail="Skills parameter cannot be empty")
         user_skills = set(skills.split(","))
-        text = " ".join(user_skills)
+        text = " ".join(user_skills)[:10000]  # Cap input
         matched_jobs = match_jobs(text, top_k=5)
         all_required = set(skill for job in JOBS for skill in job.get("requiredSkills", []))
         missing_skills = list(all_required - user_skills)
@@ -221,12 +237,13 @@ async def get_recommendations(
             skill: {"resume": [], "jd": [], "confidence": 0.5} for skill in user_skills
         }
         for skill in user_skills:
-            jd_snippets = [job["description"] for job in JOBS if skill in job.get("requiredSkills", [])]
+            jd_snippets = [job["description"][:100] for job in JOBS if skill in job.get("requiredSkills", [])]
             evidence_by_skill[skill]["jd"] = jd_snippets or [f"No job requires {skill}"]
 
         logger.info("Successfully generated recommendations")
         await get_or_create_user(session, current_user["email"], current_user.get("name"), current_user.get("login"))
-
+        gc.collect()
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
         return {
             "extractedSkills": list(user_skills),
             "missingSkills": missing_skills,

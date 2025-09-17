@@ -1,17 +1,24 @@
-import pdfplumber
-import spacy
+import PyPDF2
 import re
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
+from sentence_transformers.quantization import quantize_embeddings
 import faiss
 from typing import List, Dict, Any
 from pathlib import Path
 import logging
 import os
+import gc
+import pickle
+import torch
+from memory_profiler import profile
+
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 ROOT = Path(__file__).resolve().parent.parent
+EMBEDDING_CACHE = ROOT / "job_emb_cache.pkl"
+
 def validate_learning_map(data: Dict) -> bool:
     """Validate learning_map.json structure."""
     for skill, entry in data.items():
@@ -35,6 +42,7 @@ def validate_learning_map(data: Dict) -> bool:
             logger.error(f"Invalid project in skill {skill}: missing title or url")
             return False
     return True
+
 try:
     skills_path = ROOT / "skills.json"
     jobs_path = ROOT / "jobs.json"
@@ -52,31 +60,62 @@ try:
 except Exception as e:
     logger.error(f"Failed to load JSON files: {str(e)}")
     raise Exception(f"Failed to load required data files: {str(e)}")
+
+# Limit jobs to 200 to reduce memory (adjust based on your jobs.json size)
+JOBS = JOBS[:200]
 JOB_TEXTS = [j.get("description", "") for j in JOBS]
-MODEL = SentenceTransformer("all-MiniLM-L6-v2")
-JOB_EMB = MODEL.encode(JOB_TEXTS, normalize_embeddings=True)
-index = faiss.IndexFlatIP(JOB_EMB.shape[1])
-index.add(JOB_EMB.astype("float32"))
-logger.info("FAISS index initialized with job embeddings")
-try:
-    nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer"])
-    logger.info("spaCy model loaded successfully")
-except Exception as e:
-    nlp = None
-    logger.warning(f"Failed to load spaCy model: {str(e)}")
+
+_MODEL = None
+_INDEX = None
+_JOB_EMB = None
+
+def load_or_compute_embeddings():
+    """Load embeddings from cache or compute and save."""
+    global _JOB_EMB
+    if EMBEDDING_CACHE.exists():
+        with open(EMBEDDING_CACHE, "rb") as f:
+            _JOB_EMB = pickle.load(f)
+        logger.info("Loaded job embeddings from cache")
+    else:
+        with torch.no_grad():  # Prevent gradient memory
+            model = SentenceTransformer("sentence-transformers/paraphrase-MiniLM-L3-v2")
+            _JOB_EMB = model.encode(JOB_TEXTS, normalize_embeddings=True)
+            _JOB_EMB = quantize_embeddings(_JOB_EMB, precision="binary")
+        with open(EMBEDDING_CACHE, "wb") as f:
+            pickle.dump(_JOB_EMB, f)
+        logger.info("Computed and cached job embeddings")
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+    return _JOB_EMB
+
+def get_model_and_index():
+    global _MODEL, _INDEX, _JOB_EMB
+    if _MODEL is None:
+        logger.info("Lazy loading SentenceTransformer model")
+        _MODEL = SentenceTransformer("sentence-transformers/paraphrase-MiniLM-L3-v2")
+        _JOB_EMB = load_or_compute_embeddings()
+        _INDEX = faiss.IndexFlatL2(_JOB_EMB.shape[1])
+        _INDEX.add(_JOB_EMB.astype("float32"))
+        logger.info("FAISS index initialized with binary-quantized job embeddings")
+        gc.collect()
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
+    return _MODEL, _INDEX
+
+@profile
 def extract_text_from_pdf(file_path: str) -> str:
-    """Extract text from a PDF file."""
+    """Extract text from a PDF file using PyPDF2."""
     try:
-        with pdfplumber.open(file_path) as pdf:
+        with open(file_path, "rb") as file:
+            reader = PyPDF2.PdfReader(file)
             txt = []
-            for p in pdf.pages:
-                t = p.extract_text() or ""
+            for page in reader.pages[:10]:  # Limit to 10 pages
+                t = page.extract_text() or ""
                 if t.strip():
-                    txt.append(t)
+                    txt.append(t[:1000])  # Cap per page
             if not txt:
                 raise ValueError("No readable text found in the PDF")
-            extracted_text = "\n".join(txt).strip()
+            extracted_text = "\n".join(txt).strip()[:10000]  # Cap total text
             logger.info(f"Extracted {len(extracted_text)} characters from PDF")
+            gc.collect()
             return extracted_text
     except Exception as e:
         logger.error(f"PDF parse failed: {str(e)}")
@@ -88,8 +127,11 @@ def extract_text_from_pdf(file_path: str) -> str:
                 logger.info(f"Deleted temporary file {file_path}")
             except Exception as e:
                 logger.warning(f"Failed to delete temp file {file_path}: {str(e)}")
+        gc.collect()
+
+@profile
 def extract_skills(text: str) -> List[str]:
-    """Extract skills from text using regex and optional spaCy, handling synonyms."""
+    """Extract skills from text using regex, handling synonyms."""
     try:
         found = set()
         low = text.lower()
@@ -100,23 +142,22 @@ def extract_skills(text: str) -> List[str]:
                 if re.search(pat, low):
                     found.add(canonical)
                     break
-        if nlp:
-            doc = nlp(text)
-            for token in doc:
-                token_lower = token.text.lower()
-                for canonical in list(found):
-                    if token_lower == canonical.lower():
-                        found.add(canonical)
         skills = sorted(list(found))
         logger.info(f"Extracted skills: {skills}")
+        gc.collect()
         return skills
     except Exception as e:
         logger.error(f"Skill extraction failed: {str(e)}")
         raise ValueError(f"Skill extraction failed: {str(e)}")
+
+@profile
 def match_jobs(resume_text: str, top_k: int = 5) -> List[Dict[str, Any]]:
     """Match resume text to jobs using FAISS and keyword overlap."""
     try:
-        q = MODEL.encode([resume_text], normalize_embeddings=True).astype("float32")
+        model, index = get_model_and_index()
+        with torch.no_grad():
+            q = model.encode([resume_text[:10000]], normalize_embeddings=True)  # Cap input
+            q = quantize_embeddings(q, precision="binary").astype("float32")
         scores, idxs = index.search(q, top_k)
         results = []
         for sc, ix in zip(scores[0], idxs[0]):
@@ -138,10 +179,14 @@ def match_jobs(resume_text: str, top_k: int = 5) -> List[Dict[str, Any]]:
             })
         sorted_results = sorted(results, key=lambda x: x["score"], reverse=True)
         logger.info(f"Matched {len(sorted_results)} jobs, top job: {sorted_results[0]['title']} - {sorted_results[0]['company']} with missing skills: {sorted_results[0]['missing_skills']}")
+        gc.collect()
+        torch.cuda.empty_cache() if torch.cuda.is_available() else None
         return sorted_results
     except Exception as e:
         logger.error(f"Job matching failed: {str(e)}")
         raise ValueError(f"Job matching failed: {str(e)}")
+
+@profile
 def generate_learning_plan(missing_skills: List[str], matched_jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Generate a learning plan prioritizing top job's missing skills."""
     try:
@@ -180,22 +225,32 @@ def generate_learning_plan(missing_skills: List[str], matched_jobs: List[Dict[st
                 "time": map_data["time"]
             })
         logger.info(f"Generated learning plan with {len(learning_plan)} weeks: {', '.join([p['topic'] for p in learning_plan])}")
+        gc.collect()
         return learning_plan
     except Exception as e:
         logger.error(f"Learning plan generation failed: {str(e)}")
         raise ValueError(f"Learning plan generation failed: {str(e)}")
+
+@profile
 def generate_evidence(text: str, skills: List[str]) -> Dict[str, Any]:
-    """Generate evidence for skills from resume and job descriptions."""
+    """Generate evidence for skills using a generator to reduce memory."""
     try:
         evidence_by_skill = {}
-        sentences = re.split(r'[.!?]+', text)
+        def sentence_generator():
+            for sentence in re.split(r'[.!?]+', text):
+                s = sentence.strip()
+                if s:
+                    yield s[:100]  # Cap sentence length
+
         for skill in skills:
             resume_snippets = []
-            for sentence in sentences:
+            for sentence in sentence_generator():
                 if re.search(r'\b' + re.escape(skill) + r'\b', sentence, re.IGNORECASE):
-                    snippet = sentence.strip()
-                    resume_snippets.append(snippet[:100] + "..." if len(snippet) > 100 else snippet)
-            jd_snippets = [job["description"][:100] + "..." if len(job["description"]) > 100 else job["description"] for job in JOBS if skill in job.get("requiredSkills", [])]
+                    resume_snippets.append(sentence)
+            jd_snippets = [
+                job["description"][:100] + "..." if len(job["description"]) > 100 else job["description"]
+                for job in JOBS if skill in job.get("requiredSkills", [])
+            ]
             confidence = 0.9 if resume_snippets and jd_snippets else 0.7 if resume_snippets else 0.5
             evidence_by_skill[skill] = {
                 "resume": resume_snippets or ["No specific context found in resume"],
@@ -203,6 +258,7 @@ def generate_evidence(text: str, skills: List[str]) -> Dict[str, Any]:
                 "confidence": confidence
             }
         logger.info(f"Generated evidence for {len(evidence_by_skill)} skills")
+        gc.collect()
         return evidence_by_skill
     except Exception as e:
         logger.error(f"Evidence generation failed: {str(e)}")
