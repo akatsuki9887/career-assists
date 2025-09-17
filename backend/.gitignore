@@ -6,3 +6,6 @@ logs/
 __pycache__/
 *.pyc
 migrations/versions/*.py  # Alembic backups optional
+
+backend/wheels/
+*.whl
